@@ -85,4 +85,31 @@ Install Ruby on Rails using "rbenv" on Ubtuntu:
 
 - Install text editor:
 
-	curl http://c758482.r82.cf2.rackcdn.com/Subline%20Text%202.0.2%20x64.tar.bz2
+	curl http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2%20x64.tar.bz2 | tar -xjf
+	sudo mv 'Sublime Text 2' /opt/SublimeText2
+	echo 'export PATH=$PATH:/opt/SublimeText2' >> ~/.bashrc
+	source ~/.bashrc
+	
+- Let us check all the versions now
+
+	git --version
+	phantomjs -v
+	ruby -v
+	rails -v
+
+
+- Now let us create a rails application
+
+	Create a project directory and then create a application
+	mkdir /u01/ruby/projects &&cd /u01/ruby/projects
+
+	rails new test-install -q
+	NOTE: Here we are using -r to run this command in quite mode as it will produce lot of output.
+	
+	Now cd into the new rails application we have created and run the server
+	cd test-install ; rails server
+
+	Let us check the application in the browser
+	http://localhost:3000
+
+- Now we have completed configuring ruby on rails.
